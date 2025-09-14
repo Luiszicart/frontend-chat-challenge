@@ -42,6 +42,7 @@ export const HomeTopBar: React.FC<HomeTopBarProps> = ({
             variant="ghost"
             data-testid="home-top-bar-menu"
             icon={<span aria-hidden>⋮</span>}
+            style={{ color: "#ffffff" }}
           />
         )}
       </Right>

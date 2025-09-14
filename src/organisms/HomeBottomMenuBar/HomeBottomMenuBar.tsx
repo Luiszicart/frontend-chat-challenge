@@ -8,7 +8,6 @@ import { NavLink, useLocation } from "react-router-dom";
 
 function isActivePath(item: MenuItem, pathname: string) {
   if (!item.to) return false;
-  // Active if exact match or path starts with `to` (basic heuristic)
   return pathname === item.to || pathname.startsWith(item.to + "/");
 }
 
@@ -22,7 +21,6 @@ export const HomeBottomMenuBar: React.FC<HomeBottomMenuBarProps> = ({
 }) => {
   const location = (() => {
     try {
-      // Hook only works inside a Router; guard to avoid tests without router.
       return useLocation();
     } catch {
       return { pathname: "" } as { pathname: string };

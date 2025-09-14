@@ -3,26 +3,30 @@ import styled, { css } from "styled-components";
 export const Bar = styled.nav`
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-auto-columns: max-content;
+  justify-content: center;
   align-items: center;
-  gap: 4px;
-  padding: 8px 8px calc(env(safe-area-inset-bottom) + 8px);
-  border-top: 1px solid #eceef1;
-  background: #ffffff;
+  width: 361px;
+  height: 56px;
+  gap: 30px;
+  margin: 0 16px;
+  padding-top: 20px;
+  background: #000000;
 `;
 
 export const Item = styled.button<{ active?: boolean }>`
-  height: 48px;
-  padding: 0 8px;
+  width: 62px;
+  height: 42px;
+  opacity: 1;
+  gap: 2px;
   border: none;
   background: transparent;
   border-radius: 10px;
   cursor: pointer;
-
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   ${({ active }) =>
     active
@@ -40,8 +44,12 @@ export const Item = styled.button<{ active?: boolean }>`
 `;
 
 export const Label = styled.span`
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 12px;
-  line-height: 1;
-  color: #111;
-  margin-top: 2px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #52525c;
 `;

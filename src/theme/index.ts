@@ -1,3 +1,34 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: ${({ theme }) => theme.font.base};
+    font-size: ${({ theme }) => theme.font.size.body};
+    line-height: ${({ theme }) => theme.font.lineHeight.body};
+    color: ${({ theme }) => theme.colors.text};
+    background: ${({ theme }) => theme.colors.bg};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+  }
+
+  #root {
+    width: 393px;
+    height: 852px;
+    border-radius: 56px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: ${({ theme }) => theme.colors.bg};
+  }
+`;
+
 export const lightTheme = {
   colors: {
     bg: "#FFFFFF",
@@ -20,5 +51,3 @@ export type AppTheme = typeof lightTheme;
 declare module "styled-components" {
   export interface DefaultTheme extends AppTheme {}
 }
-
-export { GlobalStyles } from "./GlobalStyles";

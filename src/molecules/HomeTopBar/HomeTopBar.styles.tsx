@@ -4,9 +4,9 @@ export const Bar = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+  margin-top: 30px;
   padding: 12px 16px;
-  border-bottom: 1px solid #eceef1;
-  background: #ffffff;
+  background: #000000;
 `;
 
 export const Left = styled.div`

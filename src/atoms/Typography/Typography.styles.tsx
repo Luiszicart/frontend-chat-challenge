@@ -3,7 +3,7 @@ import type { TypographyProps } from "./Typography.types";
 
 const base = css`
   margin: 0;
-  color: #111;
+  color: #ffffff;
 `;
 
 const mapVariant = (v: NonNullable<TypographyProps["variant"]>) => {

@@ -12,6 +12,17 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.colors.bg};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+  }
+  #root {
+    width: 393px;
+    height: 852px;
+    border-radius: 56px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: ${({ theme }) => theme.colors.bg};
   }
   h1, h2, h3 { line-height: ${({ theme }) =>
     theme.font.lineHeight.heading}; margin: 0; }
