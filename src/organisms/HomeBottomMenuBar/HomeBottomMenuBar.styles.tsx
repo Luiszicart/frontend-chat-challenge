@@ -28,15 +28,6 @@ export const Item = styled.button<{ active?: boolean }>`
   align-items: center;
   justify-content: center;
 
-  ${({ active }) =>
-    active
-      ? css`
-          outline: 2px solid #111827;
-        `
-      : css`
-          outline: 2px solid transparent;
-        `}
-
   &:focus-visible {
     outline: 2px solid #111827;
     outline-offset: 2px;

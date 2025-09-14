@@ -39,10 +39,14 @@ export const HomeTopBar: React.FC<HomeTopBarProps> = ({
             iconOnly
             ariaLabel={menuAriaLabel}
             onClick={onMenuClick}
-            variant="ghost"
             data-testid="home-top-bar-menu"
             icon={<span aria-hidden>⋮</span>}
-            style={{ color: "#ffffff" }}
+            style={{
+              color: "#ffffff",
+              border: "none",
+              background: "transparent",
+              boxShadow: "none",
+            }}
           />
         )}
       </Right>
